@@ -135,7 +135,7 @@ h1.no-display{
 .hideTextButton{
 	position:fixed;
 	left: 30vw;
-	top: 70vh;
+	top: 10vh;
 	background: #b600ff;
 	border: none;
 	padding: 0.5rem 1rem;
