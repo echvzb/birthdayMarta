@@ -1,0 +1,187 @@
+@keyframes enter-logo{
+	from{
+		opacity:0;
+	}to{
+		opacity:1;
+	}
+} 
+@keyframes exit-logo{
+	0%{
+		transform: scale(1);		
+	}25%{
+		transform: scale(1.5);
+	}
+	50%{
+		transform: scale(0.7);  
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes exit-hero{
+	from{
+		opacity:1;
+	}to{
+		opacity:0;
+	}
+}
+.logo.enter{
+	animation: enter-logo 0.5s ease-in;
+}
+.logo.exit{
+	animation: exit-logo 0.5s ease-out;
+}
+.intro-hero.exit{
+	animation: exit-hero 300ms;
+}
+.intro-hero{
+	height:100vh;
+	width:100vw;
+	position:absolute;
+	left:0;
+	top:0;
+	background: #fafafa;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	z-index: 200;
+}
+.logo{
+	width: 15vw;
+	height: 15vw;
+	background-image: url('https://res.cloudinary.com/df9fhapay/image/upload/v1606528768/echvzb-logo_a3gl3p.svg');
+	background-size: cover;
+}
+@media (max-width: 768px){
+	.logo{
+		width: 40vw;
+		height: 40vw;
+	}
+}
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
+:root {
+	--dark: #7200ca;
+	--light: #fafafa;
+	--shadow: inset 0.5rem 0.5rem 1.5rem #2e0051, inset -0.5rem -0.5rem 1.5rem #b600ff;
+}
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--dark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--light);
+}
+@keyframes wait {
+	from {
+		background: var(--light);
+		color: var(--light);
+	}
+	to {
+		color: var(--dark);
+		background: var(--dark);
+	}
+}
+.pointer.wait {
+	display: none;
+}
+.pointer.write, .pointer.space {
+	display: none;
+}
+.pointer.space {
+	color: var(--light);
+}
+.pointer.letter {
+	color: var(--dark);
+}
+h1 {
+	transition:700ms;
+	font-size: 2rem;
+	text-align: center;
+	color: #fff;
+	padding: 0.5rem 0;
+	margin-bottom: 1.5rem;
+}
+.feature-img{
+	position: fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right: 0;
+	background-image: url('https://res.cloudinary.com/df9fhapay/image/upload/v1611973164/WhatsApp_Image_2021-01-29_at_8.01.49_PM_ycrcl7.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:100vw;
+	height: 100vh;
+	z-index: -1;
+}
+h1.no-display{
+	background: var(--dark);
+	border-radius: 1rem;
+	box-shadow:  20px 20px 60px #b600ff,
+             -20px -20px 60px #b600ff;
+}
+.container{
+	width: 768px;
+	margin: auto;
+	padding: 10vh 0;
+}
+.hideTextButton{
+	position:fixed;
+	left: 30vw;
+	top: 90vh;
+	background: #b600ff;
+	border: none;
+	padding: 0.5rem 1rem;
+	font-family:'Fraunces', serif;
+	cursor:pointer;
+	color: #fafafa;
+	box-shadow:  20px 20px 60px #2e0051,
+             -20px -20px 60px #b600ff;
+	border-radius: 0.5rem 2rem;
+	font-size:0.75rem;
+}
+main {
+	transition: 700ms;
+	background-color: rgba(114, 0 , 202, 0.6);
+	min-height: 100vh;
+	box-shadow: var(--shadow);
+	z-index: 3;
+}
+main.no-display{
+	background-color: rgba(114, 0 , 202, 0.2) !important;
+}
+p {
+	font-size: 1rem;
+	color: #fafafa;
+}
+p.no-display{
+	display:none;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 28px;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+	font-family: 'Fraunces', serif;
+	background: var(--dark);
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	.container {
+		width: 90%;
+	}
+}
